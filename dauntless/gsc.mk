@@ -34,8 +34,6 @@ ifneq (,$(wildcard $(RELEASE_GOOGLE_DAUNTLESS_DIR)/proto11.ec.bin))
 ifneq ($(DAUNTLESS_FIRMWARE_SIZE), $(shell stat -c "%s" $(RELEASE_GOOGLE_DAUNTLESS_DIR)/proto11.ec.bin))
 $(error GSC firmware size check fail)
 endif
-PRODUCT_COPY_FILES += \
-    $(RELEASE_GOOGLE_DAUNTLESS_DIR)/proto11.ec.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/dauntless/proto11.ec.bin
 $(call dist-for-goals,droid,$(RELEASE_GOOGLE_DAUNTLESS_DIR)/proto11.ec.bin)
 else
 $(error GSC firmware not found in $(RELEASE_GOOGLE_DAUNTLESS_DIR))
@@ -46,8 +44,6 @@ ifneq (,$(wildcard $(RELEASE_GOOGLE_DAUNTLESS_DIR)/evt.ec.bin))
 ifneq ($(DAUNTLESS_FIRMWARE_SIZE), $(shell stat -c "%s" $(RELEASE_GOOGLE_DAUNTLESS_DIR)/evt.ec.bin))
 $(error GSC firmware size check fail)
 endif
-PRODUCT_COPY_FILES += \
-    $(RELEASE_GOOGLE_DAUNTLESS_DIR)/evt.ec.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/dauntless/evt.ec.bin
 $(call dist-for-goals,droid,$(RELEASE_GOOGLE_DAUNTLESS_DIR)/evt.ec.bin)
 else
 $(error GSC firmware not found in $(RELEASE_GOOGLE_DAUNTLESS_DIR))
@@ -58,8 +54,6 @@ ifneq (,$(wildcard $(RELEASE_GOOGLE_DAUNTLESS_DIR)/d3m2.ec.bin))
 ifneq ($(DAUNTLESS_FIRMWARE_SIZE), $(shell stat -c "%s" $(RELEASE_GOOGLE_DAUNTLESS_DIR)/d3m2.ec.bin))
 $(error GSC firmware size check fail)
 endif
-PRODUCT_COPY_FILES += \
-    $(RELEASE_GOOGLE_DAUNTLESS_DIR)/d3m2.ec.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/dauntless/d3m2.ec.bin
 $(call dist-for-goals,droid,$(RELEASE_GOOGLE_DAUNTLESS_DIR)/d3m2.ec.bin)
 else
 $(error GSC firmware not found in $(RELEASE_GOOGLE_DAUNTLESS_DIR))
