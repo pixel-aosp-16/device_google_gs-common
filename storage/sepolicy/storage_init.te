@@ -1,0 +1,4 @@
+# support storage init
+init_daemon_domain(storage_init)
+type storage_init, domain;
+type storage_init_exec, file_type, exec_type, vendor_file_type;
