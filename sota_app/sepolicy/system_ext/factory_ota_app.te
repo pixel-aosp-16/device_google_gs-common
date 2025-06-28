@@ -11,6 +11,8 @@ allow factory_ota_app ota_package_file:dir rw_dir_perms;
 allow factory_ota_app ota_package_file:file create_file_perms;
 
 # Properties
+# For read sys.boot.reason
+get_prop(factory_ota_app, system_boot_reason_prop)
 # For write system property persist.*
 set_prop(factory_ota_app, sota_prop);
 
